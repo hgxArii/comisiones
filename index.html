@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,55 +10,80 @@
 </head>
 <body>
 
-    <main class="contenedor">
-        <header class="encabezado">
-            <div class="icono-calculadora">💰</div>
-            <h1>Calculadora de Comisiones</h1>
-            <p class="subtitulo">Calcula tus ingresos de forma sencilla</p>
-        </header>
-<section class="formulario">
-    <label for="txtSueldoBase">Salario Base</label>
+<main class="contenedor">
+    <header class="encabezado">
+    <div class="icono-calculadora"> $ </div>
+    <div>
+    <p class="empresa">GESTIÓN COMERCIAL</p>
+    <h1>Calculadora de Comisiones</h1>
+    <p class="subtitulo"> Calcula tus ingresos de forma rápida y precisa</p>
+    </div>
+
+    </header>
+    <section class="formulario">
+    <div class="campo"><label for="txtSueldoBase"> Salario Base </label>
     <input type="text" id="txtSueldoBase" onblur="validarSueldoBase()">
     <span id="errorSueldoBase" class="mensaje-error"></span>
-
-    <label for="txtVentas">Número de ventas</label>
+    </div>
+    
+    <div class="campo">
+    <label for="txtVentas"> Número de ventas</label>
     <input type="text" id="txtVentas" onblur="validarVentas()">
     <span id="errorVentas" class="mensaje-error"></span>
-
-    <label for="txtPrecio">Precio del producto</label>
+    </div>
+    <div class="campo">
+    <label for="txtPrecio"> Precio del producto </label>
     <input type="text" id="txtPrecio" onblur="validarPrecio()">
-    <span id="errorPrecio" class="mensaje-error"></span>
+    <span id="errorPrecio" class="mensaje-error"> </span>
+    </div>
 
-    <button type="button" onclick="calcular()">
-        Calcular Comisión
-        <span class="flecha">→</span>
+    <button type="button" onclick="calcular()"> 
+    <span>Calcular Comisión</span>
+    <span class="flecha"> → </span>
     </button>
-</section>
+    </section>
 
+    <section class="resultados">
+    <div class="titulo-resultados">
+    <div class="punto"></div>
+    <div>
+    <h2>Resultados</h2>
+    <p> Resumen de tus ingresos </p>
+    </div>
+    </div>
+     
+    <div class="resultado-item">
+    <div> 
+    <p class="resultado-titulo"> Salario Base </p>
+    <p class="resultado-descripcion"> Ingreso mensual</p>
+    </div>
+    <span id="spSueldoBase" class="valor"> $0.00 </span>
+    </div>
 
-        <section class="resultados">
-            <h2><span class="punto"></span> Resultados</h2>
+    <div class="resultado-item">
+    <div>
+    <p class="resultado-titulo"> Comisión </p>
+    <p class="resultado-descripcion"> Comisión por ventas </p>
+    </div>
+    <span id="spComision" class="valor"> $0.00 </span>
+    </div>
 
-            <div class="resultado-item">
-                <p>Salario Base</p>
-                <span id="spSueldoBase" class="valor">$0.00</span>
-            </div>
+    <div class="resultado-total">
+    <div>
+    <p class="total-label"> TOTAL A RECIBIR </p>
+    <p class="total-descripcion"> Salario + comisión </p>
+    </div>
+    <span id="spTotal" class="valor-total"> $0.00 </span>
+    </div>
+    </section>
 
-            <div class="resultado-item">
-                <p>Comisión</p>
-                <span id="spComision" class="valor">$0.00</span>
-            </div>
+   <footer class="pie">
+   <span>Gestión Comercial</span>
+   <span class="separador">•</span>
+   <span>Calculadora de ingresos</span>
+   </footer>
 
-            <div class="resultado-item resultado-total">
-                <p>Total a recibir</p>
-                <span id="spTotal" class="valor-total">$0.00</span>
-            </div>
-        </section>
+   </main>
 
-        <footer class="pie">
-            Calculadora de ingresos · Ventas
-        </footer>
-    </main>
-
-</body>
-</html>
+   </body>
+   </html>

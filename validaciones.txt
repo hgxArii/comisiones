@@ -1,0 +1,52 @@
+PROMPT 1:
+
+Quiero validar los inputs de mi formulario de Calculadora de Comisiones usando JavaScript.
+
+Los IDs existentes son:
+- txtSueldoBase
+- txtVentas
+- txtPrecio
+
+Reglas:
+- Los campos no pueden estar vacíos.
+- Solo se permiten números.
+- Máximo 5 dígitos.
+- Los errores no deben mostrarse con alert.
+- Los mensajes deben aparecer debajo de cada input.
+- Los mensajes deben ser de color rojo y estar en cursiva.
+- No modificar los IDs existentes.
+
+
+PROMPT 2:
+
+Agrega validaciones adicionales a mi formulario.
+
+Para txtSueldoBase:
+- Campo obligatorio.
+- Solo números.
+- Mínimo 1.
+- Máximo 99999.
+- Máximo 5 dígitos.
+
+Para txtVentas:
+- Campo obligatorio.
+- Solo números enteros.
+- Mínimo 0.
+- Máximo 99999.
+- Máximo 5 dígitos.
+
+Para txtPrecio:
+- Campo obligatorio.
+- Solo números.
+- Mínimo 1.
+- Máximo 99999.
+- Máximo 5 dígitos.
+
+Los errores deben aparecer debajo de cada campo, en color rojo y cursiva.
+No usar alert.
+
+PROMPT 3:
+Haz que todas las validaciones se ejecuten cuando el usuario presione el botón "Calcular Comisión".
+Si existe algún error, no debe realizarse el cálculo.
+Si todos los campos son válidos, debe realizarse normalmente el cálculo de la comisión.
+No cambiar los IDs existentes ni modificar la estructura principal del formulario.

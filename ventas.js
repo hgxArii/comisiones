@@ -1,6 +1,5 @@
-const VENTAS_BASE = 5;
 
-
+ const VENTAS_BASE = 5;
 function calcularComision(numeroVentas, PrecioProducto) {
     let comision = 0;
 
@@ -10,81 +9,73 @@ function calcularComision(numeroVentas, PrecioProducto) {
 
     return comision;
 }
-
-
-function validarSueldoBase() {
-    let valor = document.getElementById("txtSueldoBase").value;
+ function validarSueldoBase() {
+    let numeroventasStr = recuperarTexto("txtSueldoBase");
     let mensaje = document.getElementById("errorSueldoBase");
 
-    if (valor == "") {
+    mensaje.textContent = "";
+
+    if (numeroventasStr == "") {
         mensaje.textContent = "El campo no puede estar vacío";
         return false;
     }
 
-    if (!/^[0-9]+$/.test(valor)) {
+    if (!/^[0-9]+$/.test(numeroventasStr)) {
         mensaje.textContent = "Solo se permiten números";
         return false;
     }
 
-    if (valor.length > 5) {
+    if (numeroventasStr.length > 5) {
         mensaje.textContent = "Máximo 5 dígitos";
         return false;
-    }
-
-    mensaje.textContent = "";
+}
     return true;
 }
-
-
-function validarVentas() {
-    let valor = document.getElementById("txtVentas").value;
+ function validarVentas() {
+    let numeroventasStr = recuperarTexto("txtVentas");
     let mensaje = document.getElementById("errorVentas");
 
-    if (valor == "") {
+    mensaje.textContent = "";
+
+    if (numeroventasStr == "") {
         mensaje.textContent = "El campo no puede estar vacío";
         return false;
     }
 
-    if (!/^[0-9]+$/.test(valor)) {
+    if (!/^[0-9]+$/.test(numeroventasStr)) {
         mensaje.textContent = "Solo se permiten números";
         return false;
     }
 
-    if (valor.length > 5) {
+    if (numeroventasStr.length > 5) {
         mensaje.textContent = "Máximo 5 dígitos";
         return false;
-    }
-
-    mensaje.textContent = "";
+}
     return true;
 }
-
-
-function validarPrecio() {
-    let valor = document.getElementById("txtPrecio").value;
+ function validarPrecio() {
+    let numeroventasStr = recuperarTexto("txtPrecio");
     let mensaje = document.getElementById("errorPrecio");
 
-    if (valor == "") {
+    mensaje.textContent = "";
+
+    if (numeroventasStr == "") {
         mensaje.textContent = "El campo no puede estar vacío";
         return false;
     }
 
-    if (!/^[0-9]+$/.test(valor)) {
+    if (!/^[0-9]+$/.test(numeroventasStr)) {
         mensaje.textContent = "Solo se permiten números";
         return false;
     }
 
-    if (valor.length > 5) {
+    if (numeroventasStr.length > 5) {
         mensaje.textContent = "Máximo 5 dígitos";
         return false;
-    }
-
-    mensaje.textContent = "";
+}
     return true;
 }
-
-
-function calcular() {
+ function calcular() {
 
     if (validarSueldoBase() == false) {
         return;
